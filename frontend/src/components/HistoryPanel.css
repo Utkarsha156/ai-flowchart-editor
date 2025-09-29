@@ -1,0 +1,97 @@
+.history-panel {
+    width: 320px;
+    background: linear-gradient(180deg, #374151 0%, #1f2937 100%);
+    border-left: 1px solid #4c1d95;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden; /* Hide scrollbar of the panel itself */
+    position: relative;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.history-panel h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.history-header .btn {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.history-content {
+    flex-grow: 1; /* Make the content area take all available space */
+    overflow-y: auto; /* Add scrollbar to the content area */
+    padding-right: 10px; /* Space for scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.history-content::-webkit-scrollbar {
+    display: none; /* WebKit */
+}
+
+.history-item {
+    background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+    border: 1px solid #4c1d95;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.history-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.history-source {
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.source-ai {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    color: #ffffff;
+}
+
+.source-manual {
+    background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+    color: #ffffff;
+}
+
+.history-type {
+    font-style: italic;
+    color: #9ca3af;
+}
+
+.history-details {
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Preserve formatting */
+    color: #ffffff;
+    background-color: #1f2937;
+    padding: 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.history-timestamp {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-align: right;
+    margin-top: 8px;
+}

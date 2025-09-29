@@ -1,0 +1,50 @@
+.condition-node {
+  width: 100px;
+  height: 100px;
+  background-color: #fef3c7;
+  border: 2px solid #a16207;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* The diamond shape is created by rotating the node */
+  transform: rotate(45deg);
+}
+
+.condition-node .label {
+  /* We rotate the label back to make the text horizontal */
+  transform: rotate(-45deg);
+  color: #a16207;
+  padding: 10px;
+  max-width: 80px; /* prevent text overflow */
+  white-space: normal;
+  word-wrap: break-word;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/* Position handles correctly on the rotated diamond shape */
+.react-flow__node-condition .react-flow__handle {
+  width: 8px !important;
+  height: 8px !important;
+  border: 1px solid #9ca3af !important;
+  background: #6b7280 !important;
+  opacity: 0.8 !important;
+  z-index: 10 !important;
+}
+
+.react-flow__node-condition .react-flow__handle:hover {
+  background: #9ca3af !important;
+  border-color: #d1d5db !important;
+  opacity: 1 !important;
+}
+
+/* Top handle (input) */
+.react-flow__node-condition .react-flow__handle-top {
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
